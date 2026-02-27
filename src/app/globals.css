@@ -48,7 +48,19 @@ body {
     radial-gradient(at 100% 0%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
   color: var(--foreground);
   min-height: 100vh;
-  font-size: 1.15rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.15rem;
+  }
 }
 
 @layer components {
@@ -61,13 +73,21 @@ body {
 
   .premium-input {
     width: 100%;
-    border-radius: 1.25rem;
+    border-radius: 1rem;
     border: 1px solid #e2e8f0;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 1.125rem 1.25rem;
+    padding: 0.875rem 1rem;
     outline: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .premium-input {
+      border-radius: 1.25rem;
+      padding: 1.125rem 1.25rem;
+      font-size: 1.1rem;
+    }
   }
 
   .premium-input:focus {
@@ -79,9 +99,9 @@ body {
   .premium-button {
     position: relative;
     overflow: hidden;
-    border-radius: 1.25rem;
+    border-radius: 1rem;
     background-color: #0f172a;
-    padding: 1.125rem 2rem;
+    padding: 0.875rem 1.5rem;
     font-weight: 800;
     color: white;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,7 +110,15 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 768px) {
+    .premium-button {
+      border-radius: 1.25rem;
+      padding: 1.125rem 2rem;
+      font-size: 1.05rem;
+    }
   }
 
   .premium-button:hover {

@@ -219,23 +219,23 @@ export default function Page() {
   }
 
   return (
-    <div className="min-h-screen p-6 md:p-12">
+    <div className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-12">
       <title>White Villa වසන්ත උත්සවය – 2026</title>
-      <div className="mx-auto max-w-6xl grid gap-8 md:grid-cols-5 items-start">
+      <div className="mx-auto max-w-6xl grid gap-6 lg:gap-8 lg:grid-cols-5 items-start">
         {/* FORM SECTION */}
-        <div className="md:col-span-3 glass-card rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden">
+        <div className="lg:col-span-3 glass-card rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full -mr-32 -mt-32 blur-3xl" />
 
           <div className="relative">
-            <h1 className="text-4xl font-black text-slate-900 tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
               White Villa <span className="text-emerald-600">වසන්ත උත්සවය – 2026</span>
             </h1>
             <p className="mt-3 text-slate-500 font-medium max-w-md">
               අවුරුදු උත්සවයේ ක්‍රීඩා සඳහා සහභාගී වීමට පහත තොරතුරු නිවැරදිව පිරවුම් කරන්න.
             </p>
 
-            <form onSubmit={onSubmit} className="mt-10 space-y-6">
-              <div className="grid gap-6 md:grid-cols-2">
+            <form onSubmit={onSubmit} className="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+              <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-1">
                     සම්පූර්ණ නම
@@ -274,7 +274,7 @@ export default function Page() {
                 />
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-1">
                     උපන් දිනය
@@ -301,7 +301,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-1">
                     ජාතික හැදුනුම්පත් අංකය
@@ -330,7 +330,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-1">
                     ග්‍රාමී සේවා වසම
@@ -391,8 +391,8 @@ export default function Page() {
         </div>
 
         {/* SUMMARY SECTION */}
-        <div className="md:col-span-2 space-y-6">
-          <div className="glass-card rounded-[2.5rem] p-8 overflow-hidden relative" id="progress-report-card">
+        <div className="lg:col-span-2 space-y-6">
+          <div className="glass-card rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] p-6 sm:p-8 overflow-hidden relative" id="progress-report-card">
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-yellow-500/10 rounded-full blur-3xl animate-pulse" />
             <div className="relative">
               <div className="flex items-center justify-between">
@@ -428,14 +428,14 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                <div className="bg-white/50 border border-slate-100 p-5 rounded-3xl group hover:border-emerald-200 transition-colors">
-                  <div className="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Total Players</div>
-                  <div className="text-3xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">{rows.length}</div>
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="bg-white/50 border border-slate-100 p-3 sm:p-5 rounded-2xl sm:rounded-3xl group hover:border-emerald-200 transition-colors">
+                  <div className="text-[9px] sm:text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Total Players</div>
+                  <div className="text-2xl sm:text-3xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">{rows.length}</div>
                 </div>
-                <div className="bg-white/50 border border-slate-100 p-5 rounded-3xl group hover:border-emerald-200 transition-colors">
-                  <div className="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Active Sports</div>
-                  <div className="text-3xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">{report.length}</div>
+                <div className="bg-white/50 border border-slate-100 p-3 sm:p-5 rounded-2xl sm:rounded-3xl group hover:border-emerald-200 transition-colors">
+                  <div className="text-[9px] sm:text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Active Sports</div>
+                  <div className="text-2xl sm:text-3xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">{report.length}</div>
                 </div>
               </div>
 
@@ -475,7 +475,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="emerald-gradient rounded-[2.5rem] p-8 relative overflow-hidden shadow-2xl shadow-emerald-200">
+          <div className="emerald-gradient rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] p-6 sm:p-8 relative overflow-hidden shadow-2xl shadow-emerald-200">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl" />
             <h3 className="text-lg font-black tracking-tight relative mb-2">සංවිධාන කමිටුව</h3>
             <p className="text-emerald-50/80 text-sm font-medium relative leading-relaxed">

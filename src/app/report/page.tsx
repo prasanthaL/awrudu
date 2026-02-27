@@ -205,32 +205,32 @@ export default function ReportPage() {
     }
 
     return (
-        <div className="min-h-screen p-6 md:p-12">
+        <div className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-12">
             <div className="mx-auto max-w-6xl">
                 <header className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
-                        <h1 className="text-4xl font-black text-slate-900 tracking-tight">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
                             White Villa <span className="text-emerald-600">වසන්ත උත්සවය – 2026</span>
                         </h1>
-                        <p className="mt-2 text-slate-500 font-medium">සියලුම ක්‍රීඩා සහ සහභාගීවන්නන්ගේ සවිස්තරාත්මක වාර්තාව.</p>
+                        <p className="mt-2 text-slate-500 text-sm sm:text-base font-medium">සියලුම ක්‍රීඩා සහ සහභාගීවන්නන්ගේ සවිස්තරාත්මක වාර්තාව.</p>
                     </div>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
                         <Link
                             href="/"
-                            className="premium-button bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 hover:border-slate-300 px-5 py-2.5"
+                            className="premium-button bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 hover:border-slate-300 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm"
                         >
                             ලියාපදිංචිය
                         </Link>
-                        <div className="flex rounded-2xl border border-emerald-100 overflow-hidden shadow-sm">
+                        <div className="flex rounded-xl sm:rounded-2xl border border-emerald-100 overflow-hidden shadow-sm">
                             <button
                                 onClick={exportToCSV}
-                                className="bg-white px-4 py-2 text-xs font-bold text-emerald-700 hover:bg-emerald-50 transition-colors border-r border-emerald-100"
+                                className="bg-white px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-bold text-emerald-700 hover:bg-emerald-50 transition-colors border-r border-emerald-100"
                             >
                                 Export CSV
                             </button>
                             <button
                                 onClick={() => exportToPDFDirect('full-report-content', 'full_report.pdf')}
-                                className="emerald-gradient px-4 py-2 text-xs font-bold transition-opacity hover:opacity-90"
+                                className="emerald-gradient px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-bold transition-opacity hover:opacity-90"
                             >
                                 Download Full PDF
                             </button>
@@ -259,22 +259,22 @@ export default function ReportPage() {
                                 <div
                                     key={sportName}
                                     id={`sport-${sportIdx}`}
-                                    className="glass-card rounded-[2.5rem] overflow-hidden sport-section"
+                                    className="glass-card rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden sport-section"
                                     data-sport={sportName}
                                     style={{ animationDelay: `${sportIdx * 100}ms` }}
                                 >
-                                    <div className="p-8 md:p-10 border-b border-slate-100 bg-slate-50/30">
-                                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                                    <div className="p-6 sm:p-8 lg:p-10 border-b border-slate-100 bg-slate-50/30">
+                                        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
                                             <div>
                                                 <div className="flex items-center gap-3 mb-2">
-                                                    <span className="w-2 h-8 bg-emerald-500 rounded-full" />
-                                                    <h3 className="text-3xl font-black text-slate-900 tracking-tight">{sportName}</h3>
+                                                    <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-emerald-500 rounded-full" />
+                                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tracking-tight">{sportName}</h3>
                                                 </div>
-                                                <div className="flex flex-wrap gap-3">
-                                                    <span className="bg-white border border-slate-100 px-4 py-1.5 rounded-full text-xs font-black text-slate-500 uppercase tracking-widest">
+                                                <div className="flex flex-wrap gap-2 sm:gap-3">
+                                                    <span className="bg-white border border-slate-100 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-xs font-black text-slate-500 uppercase tracking-widest">
                                                         Total: <span className="text-emerald-600">{list.length}</span>
                                                     </span>
-                                                    <span className="bg-white border border-slate-100 px-4 py-1.5 rounded-full text-xs font-black text-slate-500 uppercase tracking-widest">
+                                                    <span className="bg-white border border-slate-100 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-xs font-black text-slate-500 uppercase tracking-widest">
                                                         සහභාගීත්වය: <span className="text-blue-500">M:{maleCount}</span> • <span className="text-pink-500">F:{femaleCount}</span>
                                                     </span>
                                                 </div>
@@ -296,46 +296,45 @@ export default function ReportPage() {
                                         </div>
                                     </div>
 
-                                    <div className="overflow-x-auto">
-                                        <table className="w-full text-left">
+                                    <div className="overflow-x-auto scrollbar-hide">
+                                        <table className="w-full text-left min-w-[600px] sm:min-w-full">
                                             <thead>
                                                 <tr className="bg-slate-50/50 border-b border-slate-100">
-                                                    <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400">ක්‍රීඩකයා / විස්තර</th>
-                                                    <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400">වයස/කාණ්ඩය</th>
-                                                    <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400">ලිංගිකතාව</th>
-                                                    <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400">ලැබූ ස්ථානය</th>
-                                                    <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400 no-export text-right">Action</th>
+                                                    <th className="px-4 sm:px-8 py-4 sm:py-5 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-slate-400">ක්‍රීඩකයා / විස්තර</th>
+                                                    <th className="px-4 sm:px-8 py-4 sm:py-5 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-slate-400">වයස/කාණ්ඩය</th>
+                                                    <th className="px-4 sm:px-8 py-4 sm:py-5 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-slate-400 text-center">ලිංගිකතාව</th>
+                                                    <th className="px-4 sm:px-8 py-4 sm:py-5 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-slate-400 text-center">ලැබූ ස්ථානය</th>
+                                                    <th className="px-4 sm:px-8 py-4 sm:py-5 text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-slate-400 no-export text-right">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody className="divide-y divide-slate-50">
                                                 {list.map((p: Participant) => (
                                                     <tr key={p.id} className="hover:bg-emerald-50/30 transition-colors group">
-                                                        <td className="px-8 py-6">
-                                                            <div className="font-bold text-slate-900">{p.name}</div>
-                                                            <div className="text-[11px] text-slate-500 mt-1 font-medium">{p.address}</div>
-                                                            <div className="text-[11px] text-emerald-600 font-bold mt-0.5">{p.phone}</div>
-                                                            <div className="text-[10px] font-mono text-slate-400 mt-1 uppercase opacity-0 group-hover:opacity-100 transition-opacity">NIC: {p.nic}</div>
+                                                        <td className="px-4 sm:px-8 py-4 sm:py-6">
+                                                            <div className="font-bold text-slate-900 text-sm sm:text-base">{p.name}</div>
+                                                            <div className="text-[10px] sm:text-[11px] text-slate-500 mt-0.5 sm:mt-1 font-medium">{p.address}</div>
+                                                            <div className="text-[10px] sm:text-[11px] text-emerald-600 font-bold mt-0.5">{p.phone}</div>
                                                         </td>
-                                                        <td className="px-8 py-6">
+                                                        <td className="px-4 sm:px-8 py-4 sm:py-6">
                                                             <div className="flex flex-col">
-                                                                <span className="text-sm font-bold text-slate-700">{p.age} Yrs</span>
-                                                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-tighter">{getAgeGroup(p.age)}</span>
+                                                                <span className="text-xs sm:text-sm font-bold text-slate-700">{p.age} Yrs</span>
+                                                                <span className="text-[9px] sm:text-[10px] font-black text-slate-400 uppercase tracking-tighter">{getAgeGroup(p.age)}</span>
                                                             </div>
                                                         </td>
-                                                        <td className="px-8 py-6">
-                                                            <span className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest ${p.gender === Gender.Male ? 'bg-blue-50 text-blue-600' : 'bg-pink-50 text-pink-600'
+                                                        <td className="px-4 sm:px-8 py-4 sm:py-6 text-center">
+                                                            <span className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded-lg text-[9px] sm:text-[10px] font-black uppercase tracking-widest ${p.gender === Gender.Male ? 'bg-blue-50 text-blue-600' : 'bg-pink-50 text-pink-600'
                                                                 }`}>
                                                                 {p.gender}
                                                             </span>
                                                         </td>
-                                                        <td className="px-8 py-6">
+                                                        <td className="px-4 sm:px-8 py-4 sm:py-6 text-center">
                                                             <select
-                                                                className={`premium-input py-2 px-3 text-xs font-black uppercase tracking-widest border-none ring-1 ring-slate-100 focus:ring-emerald-500 w-40 ${p.place ? 'bg-emerald-600 text-white focus:bg-emerald-700 ring-0' : 'bg-slate-50 text-slate-500 shadow-none'
+                                                                className={`premium-input py-1.5 sm:py-2 px-2 sm:px-3 text-[10px] sm:text-xs font-black uppercase tracking-widest border-none ring-1 ring-slate-100 focus:ring-emerald-500 w-28 sm:w-40 mx-auto ${p.place ? 'bg-emerald-600 text-white focus:bg-emerald-700 ring-0' : 'bg-slate-50 text-slate-500 shadow-none'
                                                                     }`}
                                                                 value={p.place || ""}
                                                                 onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setPlace(p.id, e.target.value)}
                                                             >
-                                                                <option value="">ලබාගත් ස්ථානය</option>
+                                                                <option value="">ලැබූ ස්ථානය</option>
                                                                 <option value="1st">1st Place</option>
                                                                 <option value="2nd">2nd Place</option>
                                                                 <option value="3rd">3rd Place</option>
