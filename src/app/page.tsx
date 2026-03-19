@@ -220,7 +220,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-12">
-      <title>White Villa වසන්ත උත්සවය – 2026</title>
+      <title>White Villa වසන්ත උදානය – 2026</title>
       <div className="mx-auto max-w-6xl grid gap-6 lg:gap-8 lg:grid-cols-5 items-start">
         {/* FORM SECTION */}
         <div className="lg:col-span-3 glass-card rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 relative overflow-hidden">
@@ -228,7 +228,7 @@ export default function Page() {
 
           <div className="relative">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
-              White Villa <span className="text-emerald-600">වසන්ත උත්සවය – 2026</span>
+              White Villa <span className="text-emerald-600">වසන්ත උදානය – 2026</span>
             </h1>
             <p className="mt-3 text-slate-500 font-medium max-w-md">
               අවුරුදු උත්සවයේ ක්‍රීඩා සඳහා සහභාගී වීමට පහත තොරතුරු නිවැරදිව පිරවුම් කරන්න.

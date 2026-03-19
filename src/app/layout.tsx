@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "අවුරුදු ක්රීඩා - Avrudu Sports Registration",
+  title: "අවුරුදු ක්‍රීඩා - Avrudu Sports Registration",
   description: "Avrudu sports registration and participant reporting system.",
 };
 
@@ -31,14 +31,15 @@ export default function RootLayout({
         <nav className="sticky top-0 z-50 border-b border-slate-200/50 bg-white/70 backdrop-blur-xl">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
             <Link href="/" className="flex items-center gap-3 group transition-all">
-              <div className="bg-emerald-600 p-2 rounded-xl shadow-lg shadow-emerald-200 group-hover:scale-110 transition-transform">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 relative flex items-center justify-center group-hover:scale-110 transition-transform">
+                <img
+                  src="/logo.png"
+                  alt="White Villa Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="font-black text-slate-900 leading-tight tracking-tight text-sm sm:text-base lg:text-lg">White Villa </span>
-                <span className="text-[8px] sm:text-[10px] uppercase font-bold text-emerald-600 tracking-widest mt-0.5">වසන්ත උත්සවය – 2026</span>
+                <span className="text-[10px] sm:text-[12px] uppercase font-black text-emerald-600 tracking-[0.2em] leading-none">වසන්ත උදානය – 2026</span>
               </div>
             </Link>
             <div className="flex items-center gap-1 sm:gap-2 bg-slate-100/50 p-1 sm:p-1.5 rounded-xl sm:rounded-2xl border border-slate-200/50">
@@ -64,10 +65,12 @@ export default function RootLayout({
           <div className="mx-auto max-w-6xl px-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
               <div className="flex items-center gap-3">
-                <div className="bg-slate-200 p-2 rounded-lg">
-                  <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+                <div className="w-10 h-10 relative grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+                  <img
+                    src="/logo.png"
+                    alt="White Villa Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="font-bold text-slate-900 tracking-tight">Avrudu Sports System</span>
               </div>

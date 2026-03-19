@@ -208,11 +208,11 @@ export default function ReportPage() {
         <div className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-12">
             <div className="mx-auto max-w-6xl">
                 <header className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    <div>
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
-                            White Villa <span className="text-emerald-600">වසන්ත උත්සවය – 2026</span>
-                        </h1>
-                        <p className="mt-2 text-slate-500 text-sm sm:text-base font-medium">සියලුම ක්‍රීඩා සහ සහභාගීවන්නන්ගේ සවිස්තරාත්මක වාර්තාව.</p>
+                        <div>
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+                            White Villa <span className="text-emerald-600">වසන්ත උදානය – 2026</span>
+                            </h1>
+                            <p className="mt-2 text-slate-500 text-sm sm:text-base font-medium">සියලුම ක්‍රීඩා සහ සහභාගීවන්නන්ගේ සවිස්තරාත්මක වාර්තාව.</p>
                     </div>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
                         <Link
